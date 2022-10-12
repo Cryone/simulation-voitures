@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur de prix de voiture</title>
+</head>
+<body>
+
+    <nav class="grid navbar p10 vw100" >
+        <div class="grid header p10 ">
+            <div class="grid p10">
+                <h1 class="grid text-red ">Calculez le prix de votre future voiture</h1>
+                <h2 class="grid  text-gray">Simuler le prix de la voiture que vous allez acheter</h2>
+            </div>
+        </div>
+        <div class="grid langue center p10 ">
+            <i class=" grid center fa-solid fa-language text-black">             
+                <button class="pointer arabic"><h3>العربية</h3></button></i>
+                <!-- <button class="pointer français"><h4>Français</h4></button></i> -->
+
+        </div>
+    </nav>
+    <div class="grid container  vw100">
+        <div class="grid main-container p10 gap30">
+            <img src="/img/img.png" alt="image">
+
+            <div class="grid box p10">
+                            <!-- ************************************************
+                ***********************Français********************
+                ************************************************ -->
+                <div class="text-blue bold p10">
+                    <div class="grid p10 text-gray">Ajouter le prix de la voiture
+                    </div>
+                    <div class="grid p10">
+                        <form>
+                            <input id="prixV" type="number" class="input-item" placeholder="exemple : 18000 euros">
+                            <input class="input-item reset pointer text-white" type="reset">
+                        </form>    
+                    </div>  
+                    <div class="grid p10 text-gray">Ajouter le prix de change du marché parallèle (exemple : 1 euro = 215 dzd)
+
+                    </div>
+                    <div class="grid p10">
+                        <form>
+                            <input id="changeP" type="number" class="input-item" placeholder="exemple : 215 dzd"  class="input-item">  
+                            <input class="input-item reset pointer text-white" type="reset">
+                        </form>
+                    </div>
+                </div>
+
+                <!-- ************************************************
+                ***********************CALCULATION-BOX********************
+                ************************************************ -->
+                <div class=" calculation-box p10 shadow text-red">
+                    
+                  <div style="background-color: black" class="grid center w100">
+                    <div id="prixhtdzd"></div>
+                    <div id="taxe"></div>
+                    <div id="tva"></div>
+                    <div id="total"></div>
+                    <i class="fa-solid fa-turn-down-left black pointer"></i>
+                  </div>
+                </div>  
+                <div class="grid total p10">
+                    <div class="grid p10">
+
+                        <button class="button pointer p10 text-white " data-id="#buttonC">Calculez le prix</button> 
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>
+            
+                <!-- ************************************************
+                ***********************FOOTER********************
+                ************************************************ -->
+    <div class="grid  p10 footer vw100">
+        <div class="grid  p10 text-gray"> Share this website
+        </div>
+        <div class="grid  p10 footer-links center gap20">
+            <i class="fa-brands fa-facebook text-black pointer very-big-text"></i>
+            <i class="fa-brands fa-square-instagram text-black pointer very-big-text"></i>
+        </div>
+    </div>
+
+    <div id="overly">
+
+    </div>
+        
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    
+</body>
+<script src="https://kit.fontawesome.com/ddd97c639a.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="/js.js"></script>
+</html>

@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+* {margin: 0; padding:0px;border: 0; -webkit-appearance: none;font-family: 'Roboto', sans-serif; text-decoration: none;}
+
+
+
+/* ici on doit définir la grille, center les objets et définir les columns ainsi que les lignes */
+.grid{display: grid;}
+.gap20 {gap: 20px;}
+.gap30 {gap: 30px;}
+.gap50 {gap: 50px;}
+.h1{display: grid; font-size: 55px !important;}
+.center{place-items: center;}
+.left{place-items: left;}
+.right{place-items: right;}
+.start{place-items: start;}
+.c2{grid-template-columns: 1fr 1fr;}
+.c3{grid-template-columns: 1fr 1fr 1fr;}
+.c4{grid-template-columns: 1fr 1fr 1fr 1fr;}
+.c5{grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+.r2{grid-template-rows: 1fr 1fr;}
+.r3{grid-template-rows: 1fr 0.3fr 1fr;}
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+@media screen and (min-width : 0px) and (max-width: 800px) {
+    .c2{grid-template-columns: 1fr;}
+    .c3{grid-template-columns: 1fr;}
+    .c4{grid-template-columns: 1fr;}
+}
+.small-text {font-size: 12px;}
+.big-text {font-size: 18px;}
+.very-big-text {font-size: 25px;}
+.text-underline {text-decoration: underline}
+.inline-block {display: inline-block;}
+
+/* définir les types de couleurs */
+.white {background-color: white;}  
+.black {background-color: black;}
+.blue {background-color:rgb(10, 18, 237);;}
+.gray {background-color: rgb(247 247 247 / 89%);}
+.dark-gray {background-color: rgb(83, 83, 83);}
+.red {background-color: #FF5A5F;}
+
+
+/* Text colors */
+.text-white {color: white;}
+.text-black {color: black;}
+.text-blue {color: rgb(12, 26, 187);}
+.text-gray {color: rgb(133, 133, 133);}
+.text-red {color: rgb(239, 79, 79);}
+.bold {font-weight: bold;}
+
+
+/* padding : 2 = up to bottom left to right; 4 = E precise more */
+.p10 {padding: 10px;} 
+.p20 {padding: 20px;} 
+.p30 {padding: 30px;} 
+.p40 {padding: 40px;}
+
+
+.pt10 {padding-top: 10px;}  
+.pt20 {padding-top: 20px;}  
+.pt30 {padding-top: 30px;}  
+.pt40 {padding-top: 40px;} 
+.pt50 {padding-top: 50px;} 
+.pt60 {padding-top: 60px;} 
+
+
+
+.pl10 {padding-left: 10px;} 
+.pl20 {padding-left: 20px;} 
+.pl30 {padding-left: 30px;} 
+.pl40 {padding-left: 40px;} 
+.pl50 {padding-left: 50px;} 
+.pl60 {padding-left: 60px;} 
+.pl70 {padding-left: 70px;} 
+.pl80 {padding-left: 80px;} 
+
+.pr20 {padding-right: 20px;} 
+.pr30 {padding-right: 30px;} 
+.pr40 {padding-right: 40px;} 
+.prl50 {padding-right: 50px;} 
+.pr60 {padding-right: 60px;} 
+.pr70 {padding-right: 70px;} 
+
+
+.plr30 {padding: 0px 30px 0px 30px;} 
+
+
+
+/* margins */
+.m10 {margin: 10px;} 
+.m20 {margin: 20px;} 
+.m30 {margin: 30px;} 
+.m40 {margin: 40px;} 
+
+@media screen and (min-width : 0px) and (max-width: 800px) {
+    .pl50 {padding-left: 20px;}
+    .pl10 {padding-left: 20px;}
+    .pl20 {padding-left: 20px;}
+    .pl40 {padding-left: 20px;}
+    .p10 {padding-left: 5px;} 
+}
+/* Text characteristics */
+.bold{font-weight: bold;}
+
+
+.w100 {width: 100%;}
+.h100 {height: 100%;}
+.h30 {height: 30%;}
+.h50 {height: 50%;}
+.vw100 {width: 100vw;}
+.vh100 {height: 100vh;}
+
+.shadow {box-shadow: 4px 4px 20px rgba(88, 88, 88, 0.549)}
+
+.radius30 {border-radius: 30px;}
+.pointer {cursor: pointer;}
+.br {border-right: solid 1px rgb(218, 218, 218);}
+.bl {border-left: solid 1px rgb(218, 218, 218);}
+.bt {border-top: solid 1px rgb(218, 218, 218);}
+.bb {border-bottom: solid 1px rgb(218, 218, 218);}
+
+
+
+.radius20 {border-radius: 20px;}
+.radius30 {border-radius: 30px;}
+
+.top0 {top: 0;}
+
