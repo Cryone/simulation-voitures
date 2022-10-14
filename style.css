@@ -16,6 +16,15 @@
     grid-template-rows: 1fr 1fr;
     height: 100px;
 }
+.big-title {
+    font-size: 45px;
+}
+.small-title {
+    font-size: 30px;
+}
+.big-title {
+    font-size: 45px;
+}
 
 h1 {
     font-size: 40px;
@@ -94,22 +103,31 @@ padding: 10px 10px 0px 0px;
     height: 300px;
     z-index: 600;
 }
-.calculation-box{
-    background-color: rgb(255, 255, 255);
+.calculation-box {
+    background: rgb(255, 255, 255);
     display: none;
-    position: relative;
-    bottom: 250px;
-    height: 300px;
-    z-index: 600;
-    grid-template-rows: 1fr 1fr 1fr 1fr 50px;
-}
-
-.calculation-box i {
-    background-color: rgb(44, 156, 119);
+    /* display: block; */
     position: absolute;
-   
+    bottom:100px;
+    height: 350px;
+    width: 400px;
+    z-index: 900;
 }
 
+#total {
+    background-color: rgb(239, 79, 79);
+    /* width: 200px; */
+}
+#return {
+    background-color: rgb(142, 156, 151);
+    width: 200px;
+    /* position: absolute; */   
+}
+#return:active {
+    background-color: rgb(239, 79, 79);
+    width: 200px;
+    /* position: absolute; */   
+}
 
 
 .footer {
@@ -132,16 +150,18 @@ padding: 10px 10px 0px 0px;
     display: none;
     width: 100vw;
     height: 100vh;
-    z-index: 300;
 }
 
 @media screen and (min-width : 0px) and (max-width : 800px) {
+    .navbar{grid-template-columns: 300px 10px;}
     
-    .container {height: 100%;}
-    #container-img {display: none;}
-    .navbar {grid-template-columns: 150px 1fr; height: 80px; width: 100%;}
-    #logo {height: 40px;}
-    .container {height: 100%!important;}
-    .box {width: 300px; top: 20%; }
-    #footer {position: absolute; width: 100%;} 
+    .big-title {font-size: 25px;}
+    .small-title {font-size: 18px;}
+    .container{width: 50%;}
+    .main-container{grid-template-rows: 1fr 1fr;display: block; gap: none;}
+    .main-container img { width:300px;}
+    
+    .footer{display: relative; bottom: 0;}
+    /* .overly{height: ;} */
+
 }
