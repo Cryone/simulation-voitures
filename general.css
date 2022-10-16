@@ -6,6 +6,8 @@
 
 /* ici on doit définir la grille, center les objets et définir les columns ainsi que les lignes */
 .grid{display: grid;}
+.flex{display: flex;}
+.space-between {justify-content: space-between;}
 .gap20 {gap: 20px;}
 .gap30 {gap: 30px;}
 .gap50 {gap: 50px;}

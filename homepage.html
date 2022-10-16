@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="./general.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +14,14 @@
     <nav class="grid navbar p10 vw100" >
         <div class="grid header p10 ">
             <div class="grid p10">
-                <div class=" big-title grid text-red ">Calculez le prix de votre future voiture</div>
-                <div class="small-title grid  text-gray">Simuler le prix de la voiture que vous allez acheter</div>
+                <div class="grid   big-title  text-red  ">Calculez le prix de votre future voiture</div>
+                <div class="grid  small-title   text-gray">Simuler le prix de la voiture que vous allez acheter</div>
             </div>
         </div>
         <div class="grid langue center p10 ">
-            <i class=" grid center fa-solid fa-language text-black">             
-                <button class="pointer arabic"><h3>العربية</h3></button></i>
-                <!-- <button class="pointer français"><h4>Français</h4></button></i> -->
+                <button class="grid center pointer français"><h4>Fr</h4></button>
+                <button class="grid center pointer arabic"><h4>ع</h4></button></i>
+                
 
         </div>
     </nav>
@@ -34,7 +35,7 @@
                 ************************************************ -->
                 <div class="text-blue bold p10">
   
-                    <div class="grid p10 text-gray">Ajouter le prix de la voiture
+                    <div id="prix-voiture" class="grid p10 text-gray">Ajouter le prix de la voiture
                     </div>
                     <div class="grid p10">
                         <form>
@@ -42,7 +43,7 @@
                             <input class="input-item reset pointer text-white" type="reset">
                         </form>    
                     </div>  
-                    <div class="grid p10 text-gray">Ajouter le prix de change du marché parallèle (exemple : 1 euro = 215 dzd)
+                    <div id="prix-changeP" class="grid p10 text-gray">Ajouter le prix de change du marché parallèle (exemple : 1 euro = 215 dzd)
 
                     </div>
                     <div class="grid p10">
@@ -52,24 +53,30 @@
                         </form>
                     </div>
  
-                </div>
+                </div>  
 
                 <!-- ************************************************
                 ***********************CALCULATION-BOX********************
                 ************************************************ -->
-                <div class="calculation-box grid p10 vw100 shadow text-red">
+                <div class="calculation-box grid p10  shadow text-gray">
+                    <div class="grid calculation-box-body ">
+                        <div id="" class='inline-block p10'> Détails de calcul : <span class="material-symbols-outlined text-white">restart_alt</span></div>
+                        <div id="prixhtdzd" class="grid w100 p10"></div> 
+                        <div id="taxe" class="grid w100 p10"></div>
+                        <div id="tva" class="grid w100 p10"></div>
+                        <div id="total" class="grid center text-red p10 text-center">
+                            <div id="calculation-box-footer" class=" grid pointer p10 bold ">
+                            </div>
+                        </div>
+                    </div>
                     
-                    <div id="prixhtdzd" class="grid w100">q</div> 
-                    <div id="taxe" class="grid w100">s</div>
-                    <div id="tva" class="grid w100">d</div>
-                    <div id="total" class="grid w100 text-red">Total</div>
-                    <div id="return" class="text-red w100 grid right pointer w100">Annuler</div> 
+ 
                 </div>
 
                 <div class="grid total p10">
                     <div class="grid p10">
 
-                        <button class="button pointer p10 text-white " data-id="#buttonC">Calculez le prix</button> 
+                        <button class="button pointer p10 text-white ">Calculez le prix</button> 
                     </div>
                 </div>
             </div>     
@@ -88,6 +95,7 @@
         </div>
     </div>
     
+   
     
     <div id="overly">
 

@@ -35,7 +35,10 @@ h2 {
     font-size: 30px;
     
 }
-
+.langue { grid-template-columns: 40px 40px;
+    /* display: flex; */
+    
+}
 .langue button {
     background-color: transparent;
 }
@@ -79,6 +82,8 @@ padding: 10px 10px 0px 0px;
 }
 .button {
     background-color: rgb(239, 79, 79);
+    height: 50px;
+    width: 240px;
     
 }
 
@@ -86,14 +91,7 @@ padding: 10px 10px 0px 0px;
     background-color: rgb(186, 186, 186);
 
 }
-.total{
-    grid-template-rows: 1fr 1fr;
-    
-}
-.total input {
-    height: 30px;
-    
-}
+
 
 .arabe{
     background-color: rgb(239, 79, 79);
@@ -108,24 +106,23 @@ padding: 10px 10px 0px 0px;
     display: none;
     /* display: block; */
     position: absolute;
-    bottom:100px;
-    height: 350px;
-    width: 400px;
+    bottom:150px;
+    height: 450px;
+    width: 600px;
     z-index: 900;
 }
 
+
+
 #total {
-    background-color: rgb(239, 79, 79);
+    background-color:rgb(239, 79, 79);
+
     /* width: 200px; */
 }
-#return {
-    background-color: rgb(142, 156, 151);
-    width: 200px;
-    /* position: absolute; */   
-}
-#return:active {
-    background-color: rgb(239, 79, 79);
-    width: 200px;
+
+
+#calculation-box-footer:active {
+    background-color: rrgb(255, 255, 255);
     /* position: absolute; */   
 }
 
@@ -157,10 +154,10 @@ padding: 10px 10px 0px 0px;
     
     .big-title {font-size: 25px;}
     .small-title {font-size: 18px;}
-    .container{width: 50%;}
+
     .main-container{grid-template-rows: 1fr 1fr;display: block; gap: none;}
     .main-container img { width:300px;}
-    
+    .button{padding-left: 0; width: 235px;}
     .footer{display: relative; bottom: 0;}
     /* .overly{height: ;} */
 
