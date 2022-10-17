@@ -8,6 +8,8 @@
 .grid{display: grid;}
 .flex{display: flex;}
 .space-between {justify-content: space-between;}
+.gap5 {gap: 5px;}
+.gap10 {gap: 10px;}
 .gap20 {gap: 20px;}
 .gap30 {gap: 30px;}
 .gap50 {gap: 50px;}

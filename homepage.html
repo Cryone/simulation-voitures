@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <nav class="grid navbar p10 vw100" >
+    <nav class="grid navbar p10" >
         <div class="grid header p10 ">
             <div class="grid p10">
                 <div class="grid   big-title  text-red  ">Calculez le prix de votre future voiture</div>
@@ -25,31 +25,32 @@
 
         </div>
     </nav>
-    <div class="grid container vw100">
-        <div class="grid main-container p10 gap30">
+    <div class="grid container center">
+        <div class="grid main-container center p10 gap30">
+        
             <img src="./img/img.png" alt="image">
 
-            <div class="grid box p10">
+            <div class="grid box p10 ">
                             <!-- ************************************************
                 ***********************Français********************
                 ************************************************ -->
-                <div class="text-blue bold p10">
+                <div class="text-blue bold ">
   
-                    <div id="prix-voiture" class="grid p10 text-gray">Ajouter le prix de la voiture
+                    <div id="prix-voiture" class="grid p10 text-gray big-text">Prix de la voiture
                     </div>
-                    <div class="grid p10">
-                        <form>
+                    <div class="grid p10 w100" style="margin-bottom: 10px">
+                        <form class="grid input-grid gap5">
                             <input id="prixV" type="number" class="input-item" placeholder="exemple : 18000 euros">
                             <input class="input-item reset pointer text-white" type="reset">
                         </form>    
                     </div>  
-                    <div id="prix-changeP" class="grid p10 text-gray">Ajouter le prix de change du marché parallèle (exemple : 1 euro = 215 dzd)
+                    <div id="prix-changeP" class="grid p10 text-gray">Taux de change du marché parallèle 
 
                     </div>
-                    <div class="grid p10">
-                        <form>
+                    <div class="grid p10" style="margin-bottom: 10px">
+                        <form class="grid input-grid gap5">
                             <input id="changeP" type="number" class="input-item" placeholder="exemple : 215 dzd"  class="input-item">  
-                            <input class="input-item reset pointer text-white" type="reset">
+                            <input class="input-item reset pointer text-white" type="reset" lang="En">
                         </form>
                     </div>
  
@@ -73,7 +74,7 @@
  
                 </div>
 
-                <div class="grid total p10">
+                <div class="grid total">
                     <div class="grid p10">
 
                         <button class="button pointer p10 text-white ">Calculez le prix</button> 
@@ -81,19 +82,20 @@
                 </div>
             </div>     
         </div>
+        <div class="grid  p10 footer">
+            <div class="grid  p10 text-gray"> Share this website
+            </div>
+            <div class="grid  p10 footer-links center gap20">
+                <i class="fa-brands fa-facebook text-black pointer very-big-text"></i>
+                <i class="fa-brands fa-square-instagram text-black pointer very-big-text"></i>
+            </div>
+        </div>
     </div>
             
                 <!-- ************************************************
                 ***********************FOOTER********************
                 ************************************************ -->
-    <div class="grid  p10 footer vw100">
-        <div class="grid  p10 text-gray"> Share this website
-        </div>
-        <div class="grid  p10 footer-links center gap20">
-            <i class="fa-brands fa-facebook text-black pointer very-big-text"></i>
-            <i class="fa-brands fa-square-instagram text-black pointer very-big-text"></i>
-        </div>
-    </div>
+
     
    
     
