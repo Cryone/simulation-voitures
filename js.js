@@ -7,14 +7,16 @@ $(document).ready (function (){
 // ***********************On click Languages********************
 // ************************************************ -->
 
-$(document).on('click', '.arabic', function(){
+$(document).on('click', '.ar', function(){
 
     displayAr()
-
+    $(".ar").css({"background-color":"rgb(239, 79, 79)","border-radius":"10px"})
+    $(".fr").css("background-color","transparent")
+    
 })
 
 
-$(document).on('click', '.français', function(){
+$(document).on('click', '.fr', function(){
 
     displayFr()
 
@@ -28,6 +30,9 @@ $(document).on('click', '#overly, #return', function(){
   
     $('.calculation-box').fadeOut()
     $('#overly').fadeOut()
+    $('#container-img').fadeIn()
+    $('.box-container').fadeIn()
+    $('.total').fadeIn()
     
 
 })
@@ -35,9 +40,12 @@ $(document).on('click', '#overly, #return', function(){
 // ***********************On click calculation button********************
 // ************************************************ -->
 
-$(document).on('click', '.button', function (){
+$(document).on('click', '.total', function (){
     $('.calculation-box').css('display','grid')
     $('#overly').fadeIn()
+    $('#container-img').fadeOut()
+    $('.box-container').fadeOut()
+    $('.total').fadeOut()
     // $('#total').fadeIn()
     // $('#tva').fadeIn()
     // $('#prixhtdzd').fadeIn()
@@ -47,6 +55,15 @@ $(document).on('click', '.button', function (){
     maFonction()
         
 })
+
+
+$(document).on('click', '.button-reset', function (){
+
+    $(".reset").get(0).reset()
+})
+
+
+
 
 // <!-- ************************************************
 // ***********************Function********************
@@ -79,58 +96,33 @@ function maFonction (prixV, changeP) {
           var html
 
           html =`
-          
-
-          <nav class="grid navbar p10 vw100" >
-          <div class="grid header p10 ">
-              <div class="grid p10">
+          <div class="grid container">
+          <nav class="grid navbar" >
+              <div class="grid header p10 ">
+                  <div class="grid p10">
                   <div class="grid   big-title  text-red  ">احسب سعر سيارتك المستقبلية</div>
                   <div class="grid  small-title   text-gray">قم بمحاكاة سعر السيارة التي تنوي شرائها</div>
+                  </div>
               </div>
-          </div>
-          <div class="grid langue center p10 ">
-                  <button class="grid center pointer français"><h4>Fr</h4></button>
-                  <button class="grid center pointer arabic"><h4>ع</h4></button></i>
-                  
-  
-          </div>
-      </nav>
-      <div class="grid container vw100">
-          <div class="grid main-container p10 gap30">
-              <img src="./img/img.png" alt="image">
-  
-              <div class="grid box p10">
-                              <!-- ************************************************
-                  ***********************Français********************
-                  ************************************************ -->
-                  <div class="text-blue bold p10">
-    
-                      <div id="prix-voiture" class="grid p10 text-gray"أضف سعر السيارة
-                      </div>
-                      <div class="grid p10">
-                          <form>
-                              <input id="prixV" type="number" class="input-item" placeholder="مثال: 18000يورو">
-                              <input class="input-item reset pointer text-white" type="reset">
-                          </form>    
-                      </div>  
-                      <div id="prix-changeP" class="grid p10 text-gray">ف سعر الصرف في السوق الموازية (مثال: 1 يورو = 215 دج)
-  
-                      </div>
-                      <div class="grid p10">
-                          <form>
-                              <input id="changeP" type="number" class="input-item" placeholder="(مثال: 1 يورو = 215 دج)"  class="input-item">  
-                              <input class="input-item reset pointer text-white" type="reset">
-                          </form>
-                      </div>
-   
-                  </div>  
-  
-                  <!-- ************************************************
-                  ***********************CALCULATION-BOX********************
-                  ************************************************ -->
-                  <div class="calculation-box grid p10  shadow text-gray">
+              <div class="grid langue center p10 ">
+                  <div class="grid center fr p10">
+                      <button class="p10 big-text pointer text-black"><h4>Fr</h4></button>
+                  </div>
+                  <div class="grid center pointer ar p10">
+                      <button class="p10 big-text pointer text-white"><h4>ع</h4></button>
+                  </div>
+                    
+                      
+      
+              </div>
+          </nav>
+      
+              <div class="grid main-container center p10 gap30">
+              
+                  <img id="container-img" src="./img/img.png" alt="image">
+                  <div class="grid calculation-box grid p10 shadow text-gray">
                       <div class="grid calculation-box-body ">
-                          <div id="" class='inline-block p10'> تفاصيل الحساب : <span class="material-symbols-outlined text-white">restart_alt</span></div>
+                          <div id="" class='inline-block p10'> Détails de calcul : <span class="material-symbols-outlined text-white">restart_alt</span></div>
                           <div id="prixhtdzd" class="grid w100 p10"></div> 
                           <div id="taxe" class="grid w100 p10"></div>
                           <div id="tva" class="grid w100 p10"></div>
@@ -139,45 +131,72 @@ function maFonction (prixV, changeP) {
                               </div>
                           </div>
                       </div>
-                      
-   
                   </div>
-  
-                  <div class="grid total p10">
-                      <div class="grid p10">
-  
-                          <button class="button pointer p10 text-white ">احسب السعر</button> 
+      
+                  <div class="grid box p10 ">
+                                  <!-- ************************************************
+                      ***********************Français********************
+                      ************************************************ -->
+                      <div class="text-blue bold box-container">
+        
+                      <div id="prix-voiture" class="grid p10 text-gray big-text">
+                      سعر السيارة
                       </div>
-                  </div>
-              </div>     
-          </div>
-      </div>
-              
-                  <!-- ************************************************
-                  ***********************FOOTER********************
-                  ************************************************ -->
-
-                  <div class="grid  p10 footer vw100">
-                  <div class="grid  p10 text-gray"> شارك هذا الموقع
-                  </div>
-                  <div class="grid  p10 footer-links center gap20">
-                      <i class="fa-brands fa-facebook text-black pointer very-big-text"></i>
-                      <i class="fa-brands fa-square-instagram text-black pointer very-big-text"></i>
-                  </div>
+                          <div class="grid p10 w100" style="margin-bottom: 10px">
+                              <form class="grid input-grid gap5">
+                                  <input id="prixV" type="number" class="input-item" placeholder="مثال: 18000يورو">
+                                  <button class="grid button-reset center text-white pointer"><span class="material-symbols-outlined">
+                                      restart_alt
+                                      </span>
+                                  </button>
+                                  
+                              </form>    
+                          </div>  
+                          <div id="prix-changeP" class="grid p10 text-gray">
+                          سعر الصرف في السوق السوداء
+      
+                          </div>
+                          <div class="grid p10" style="margin-bottom: 10px">
+                              <form class="grid input-grid gap5">
+                              <input id="changeP" type="number" class="input-item" placeholder="مثال: 1 يورو = 215 دج"  class="input-item">  
+                                  <button class="grid button-reset center text-white pointer"><span class="material-symbols-outlined">
+                                      restart_alt
+                                      </span>
+                                  </button>
+                              </form>
+                          </div>
+       
+                      </div>  
+      
+                      <!-- ************************************************
+                      ***********************CALCULATION-BOX********************
+                      ************************************************ -->
+      
+      
+                      <div class="grid">
+                          <div class="grid p10 ">
+      
+                              <button class=" total pointer p10 text-white ">احسب السعر</button> 
+                          </div>
+                      </div>
+                  </div>     
               </div>
-
-          
+                      <!-- ************************************************
+                      ***********************FOOTER********************
+                      ************************************************ -->
+          <div class="grid center footer small-text text-gray">
+              @Copyright  Z / dev
+              
+      
+          </div>
+      
+                 
       </div>
+       
       <div id="overly">
-  
+      
       </div>
-          
-  
-  
-  
-  
-  
-  
+      
 
           `    
           $("body").html(html)
@@ -185,12 +204,14 @@ function maFonction (prixV, changeP) {
       
       
 
+
+
 function displayFr (){
 var html
 
 html=`
-   
-<nav class="grid navbar p10 vw100" >
+<div class="grid container">
+<nav class="grid navbar" >
     <div class="grid header p10 ">
         <div class="grid p10">
             <div class="grid   big-title  text-red  ">Calculez le prix de votre future voiture</div>
@@ -198,46 +219,22 @@ html=`
         </div>
     </div>
     <div class="grid langue center p10 ">
-            <button class="grid center pointer français"><h4>Fr</h4></button>
-            <button class="grid center pointer arabic"><h4>ع</h4></button></i>
+        <div class="grid center fr p10">
+            <button class="p10 big-text pointer text-white"><h4>Fr</h4></button>
+        </div>
+        <div class="grid center pointer ar p10">
+            <button class="p10 big-text pointer text-black"><h4>ع</h4></button>
+        </div>
+          
             
 
     </div>
 </nav>
-<div class="grid container vw100">
-<div class="grid main-container p10 gap30">
-    <img src="./img/img.png" alt="image">
 
-    <div class="grid box p10">
-        <!-- ************************************************
-        ***********************Français********************
-        ************************************************ -->
-        <div class="text-blue bold p10">
-
-            <div id="prix-voiture" class="grid p10 text-gray">Ajouter le prix de la voiture
-            </div>
-            <div class="grid p10">
-                <form>
-                    <input id="prixV" type="number" class="input-item" placeholder="exemple : 18000 euros">
-                    <input class="input-item reset pointer text-white" type="reset">
-                </form>    
-            </div>  
-            <div id="prix-changeP" class="grid p10 text-gray"> Ajouter le prix de change du marché parallèle (exemple : 1 euro = 215 dzd)
-
-            </div>
-            <div class="grid p10">
-                <form>
-                    <input id="changeP" type="number" class="input-item" placeholder="exemple : 215 dzd"  class="input-item">  
-                    <input class="input-item reset pointer text-white" type="reset">
-                </form>
-            </div>
-
-        </div>  
-
-        <!-- ************************************************
-        ***********************CALCULATION-BOX********************
-        ************************************************ -->
-        <div class="calculation-box grid p10  shadow text-gray">
+    <div class="grid main-container center p10 gap30">
+    
+        <img id="container-img" src="./img/img.png" alt="image">
+        <div class="grid calculation-box grid p10 shadow text-gray">
             <div class="grid calculation-box-body ">
                 <div id="" class='inline-block p10'> Détails de calcul : <span class="material-symbols-outlined text-white">restart_alt</span></div>
                 <div id="prixhtdzd" class="grid w100 p10"></div> 
@@ -248,38 +245,88 @@ html=`
                     </div>
                 </div>
             </div>
-            
-
         </div>
 
-        <div class="grid total p10">
-            <div class="grid p10">
-                <button class="button pointer p10 text-white ">Calculez le prix</button> 
+        <div class="grid box p10 ">
+                        <!-- ************************************************
+            ***********************Français********************
+            ************************************************ -->
+            <div class="text-blue bold box-container">
+
+                <div id="prix-voiture" class="grid p10 text-gray big-text">Prix de la voiture
+                </div>
+                <div class="grid p10 w100" style="margin-bottom: 10px">
+                    <form class="grid input-grid gap5">
+                        <input id="prixV" type="number" class="input-item" placeholder="exemple : 18000 euros">
+                        <button class="grid button-reset center text-white pointer"><span class="material-symbols-outlined">
+                            restart_alt
+                            </span>
+                        </button>
+                        
+                    </form>    
+                </div>  
+                <div id="prix-changeP" class="grid p10 text-gray">Taux de change du marché parallèle 
+
+                </div>
+                <div class="grid p10" style="margin-bottom: 10px">
+                    <form class="grid input-grid gap5">
+                        <input id="changeP" type="number" class="input-item" placeholder="exemple : 1 euro = 215 dzd"  class="input-item">  
+                        <button class="grid button-reset center text-white pointer"><span class="material-symbols-outlined">
+                            restart_alt
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>  
+
+            <!-- ************************************************
+            ***********************CALCULATION-BOX********************
+            ************************************************ -->
+
+
+            <div class="grid">
+                <div class="grid p10 ">
+
+                    <button class=" total pointer p10 text-white ">Calculez le prix</button> 
+                </div>
             </div>
-        </div>
-    </div>     
-</div>
-</div>
-    
-        <!-- ************************************************
-        ***********************FOOTER********************
-        ************************************************ -->
-    <div class="grid  p10 footer vw100">
-        <div class="grid  p10 text-gray"> Share this website
-        </div>
-        <div class="grid  p10 footer-links center gap20">
-            <i class="fa-brands fa-facebook text-black pointer very-big-text"></i>
-            <i class="fa-brands fa-square-instagram text-black pointer very-big-text"></i>
-        </div>
+        </div>     
     </div>
+            <!-- ************************************************
+            ***********************FOOTER********************
+            ************************************************ -->
+<div class="grid center footer small-text text-gray">
+    @Copyright  Z / dev
+    
 
+</div>
 
+       
+</div>
 
 <div id="overly">
 
 </div>
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     `
 
