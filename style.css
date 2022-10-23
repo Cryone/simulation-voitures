@@ -6,7 +6,8 @@
 
 
 .container{grid-template-rows: 150px 1fr 60px; 
-    height: 100vh;
+    height: 100%;
+    width: 100vw;
 
 }
 .navbar {
@@ -127,7 +128,9 @@ h2 {
 
     background-color: rgb(242, 242, 242);
     width: 100vw;
-    height: 50px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
 
     
 }
@@ -161,15 +164,13 @@ h2 {
 }
 
 
-@media screen and (min-width : 0px) and (max-width : 1280px) {
+@media screen and (min-width : 0px) and (max-width : 1600px) {
 
     
-    .main-container{padding: 0;
+        .main-container{padding: 0;
         }
         .footer {
-            height: 50px;
-            position: absolute;
-            bottom: 0;
+        height: 80px
             
         }
 
