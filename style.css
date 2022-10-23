@@ -148,7 +148,7 @@ h2 {
     height: 100vh;
 }
 
-@media screen and (min-width : 0px) and (max-width : 800px) {
+@media screen and (min-width : 0px) and (max-width : 850px) {
     .navbar{grid-template-columns: 300px 100px;}
     .big-title {font-size: 25px;}
     .small-title {font-size: 18px;}
@@ -164,7 +164,7 @@ h2 {
 }
 
 
-@media screen and (min-width : 0px) and (max-width : 1600px) {
+@media screen and (min-width : 850px) and (max-width : 1600px) {
 
     
         .main-container{padding: 0;
