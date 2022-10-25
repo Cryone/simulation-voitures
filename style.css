@@ -169,11 +169,9 @@ h2 {
     
         .main-container{padding: 0;
         }
-        .footer {position: absolute;bottom: 0;
-        height: 50px;
-        
-           
+        .footer {
+        height: 80px
+            
         }
-        .container{grid-template-rows: 150px 50px;}
 
 }
