@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 * {margin: 0; padding:0px;border: 0; -webkit-appearance: none;font-family: 'Nunito', sans-serif; text-decoration: none; font-weight: 0; box-sizing: border-box;}
-
+html, body {overflow-x: hidden; width: 100vw; height: 100vh; overflow-y: scroll;}
 
 .container{grid-template-rows: 150px 1fr 60px; 
     height: 100%;
@@ -153,14 +153,14 @@ h2 {
     .big-title {font-size: 25px;}
     .small-title {font-size: 18px;}
     /* .container {grid-template-rows: 100px 100px;} */
-    .container{width: 100vw; padding: 5px;}
+    .container{width: 100vw; padding: 5px; height: 100vh;}
     .main-container{grid-template: 1fr 1fr / 1fr ;
         display: grid; gap: 0; padding: 0 10px 0 0;}
     #container-img {width: 350px}
     .button{padding-left: 0; width: 100%;}
-    .footer {left: 0; bottom: 0; width: 100vw; font-size: 12px; position: fixed; height: 50px;}
+    .footer {left: 0; bottom: 0px; width: 100vw; font-size: 14px; position: fixed; height: 50px;}
     /* .overly{height: ;} */
-    .calculation-box {width: 350px; padding-left: 10px; position: absolute; top : 200px}
+    .calculation-box {width: 350px; padding-left: 10px; position: absolute; top : 400px}
 }
 
 
@@ -169,9 +169,11 @@ h2 {
     
         .main-container{padding: 0;
         }
-        .footer {
-        height: 80px
-            
+        .footer {position: absolute;bottom: 0;
+        height: 50px;
+        
+           
         }
+        .container{grid-template-rows: 150px 50px;}
 
 }
