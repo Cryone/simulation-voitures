@@ -37,7 +37,7 @@ h2 {
     font-size: 30px;
     
 }
-.langue { grid-template-columns: 40px 40px; 
+.langue { grid-template-columns: 40px 40px 40px; 
     /* display: flex; */
     
 }
@@ -149,7 +149,10 @@ h2 {
 }
 
 @media screen and (min-width : 0px) and (max-width : 850px) {
+    
     .navbar{grid-template-columns: 300px 100px;}
+    .langue { grid-template: 60px 60px 60px / 1fr;  }
+   
     .big-title {font-size: 25px;}
     .small-title {font-size: 18px;}
     /* .container {grid-template-rows: 100px 100px;} */
