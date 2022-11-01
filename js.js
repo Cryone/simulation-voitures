@@ -94,7 +94,7 @@ function maFonction (prixV, changeP) {
     var commas = total.toLocaleString("en-US");
     var commas = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
    
-   html =`
+    html =`
     
             <div class='flex  space-between bold big-text'><span> Détails de calcul :</span><span id='return' class="material-symbols-outlined pointer">close</span></div>
             <div id="prixhtdzd" class="grid  inline-block p10">Prix hors taxe de la voiture en dzd = <span class='bold'> ${prixHt*changeP} dzd </span>. (- TVA de 20%)</div> 
