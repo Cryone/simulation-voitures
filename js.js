@@ -94,13 +94,14 @@ function maFonction (prixV, changeP) {
     var commas = total.toLocaleString("en-US");
     var commas = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
    
-    html =`
+   html =`
     
             <div class='flex  space-between bold big-text'><span> Détails de calcul :</span><span id='return' class="material-symbols-outlined pointer">close</span></div>
-            <div id="prixhtdzd" class="grid  inline-block p10">Prix hors taxe de la voiture en dzd = <span class='bold'> ${prixHtdzd} dzd </span>. (- TVA de 20%)</div> 
+            <div id="prixhtdzd" class="grid  inline-block p10">Prix hors taxe de la voiture en dzd = <span class='bold'> ${prixHt*changeP} dzd </span>. (- TVA de 20%)</div> 
             <div id="taxe" class="grid  inline-block p10">Taxe douanière appliquée (32%) = <span class='bold'> ${taxe} dzd </span> </div>
             <div id="tva" class="grid  inline-block p10">TVA appliquée = <span class='bold'> ${tva} dzd </span></div>
-            <div id="total" class="grid center text-center text-white p10"><span>Total (Frais de transport en bateau inclus) (~500 euros) = </span><span class='bold very-big-text'> ${commas},00 dzd (TTC) </span></div>
+            <div id="tva" class="grid  inline-block p10">Frais de transport en bateau (500 euros) = <span class='bold'> ${500*changeP} dzd </span></div>
+            <div id="total" class="grid center text-center text-white p10"><span>Total= </span><span class='bold very-big-text'> ${commas},00 dzd (TTC) </span></div>
     `    
     $(".calculation-box-body").html(html)
     }
