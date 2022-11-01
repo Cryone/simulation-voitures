@@ -126,7 +126,7 @@ function maFonction (prixV, changeP) {
                       <button class="p10 small-text pointer text-white"><h4>ع</h4></button>
                   </div>
                   <div class="grid center pointer en p10">
-                  <button class="p10 small-text pointer "><h4>En</h4></button>
+                  <button class="p10 small-text pointer text-black"><h4>En</h4></button>
                     </div>
                     
                       
@@ -243,7 +243,7 @@ html=`
             <button class="p10 small-text pointer text-black"><h4>ع</h4></button>
         </div>
         <div class="grid center pointer en p10">
-        <button class="p10 small-text pointer"><h4>En</h4></button>
+        <button class="p10 small-text pointer text-black"><h4>En</h4></button>
         
     </div>
           
@@ -376,7 +376,7 @@ function displayEn (){
                 <button class="p10 small-text pointer text-black"><h4>ع</h4></button>
             </div>
             <div class="grid center pointer en p10">
-            <button class="p10 small-text pointer"><h4>En</h4></button>
+            <button class="p10 small-text pointer text-white"><h4>En</h4></button>
             
         </div>
               
